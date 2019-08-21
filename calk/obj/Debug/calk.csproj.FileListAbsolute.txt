@@ -13,3 +13,5 @@ F:\programming\vs\calk\calk\obj\Debug\calk.csproj.GenerateResource.cache
 F:\programming\vs\calk\calk\obj\Debug\calk.csproj.CoreCompileInputs.cache
 F:\programming\vs\calk\calk\obj\Debug\calk.exe
 F:\programming\vs\calk\calk\obj\Debug\calk.pdb
+F:\programming\vs\calk\calk\bin\Debug\InputBox.dll
+F:\programming\vs\calk\calk\obj\Debug\calk.csproj.CopyComplete

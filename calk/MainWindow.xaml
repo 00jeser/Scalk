@@ -10,19 +10,18 @@
         <Grid Margin="0,20,0,0">
             <Grid x:Name="gr"  Margin="10,10,135,45" Background="#FFD8D8D8" MouseDown="Grid_MouseDown">
             </Grid>
-            <Grid Margin="0,10,10,45" Background="#FFD8D8D8" MouseDown="Grid_MouseDown" HorizontalAlignment="Right" Width="120">
+            <Grid Margin="0,10,10,45" Background="#FFD8D8D8" HorizontalAlignment="Right" Width="120">
                 <Button Content="+" Height="30" FontSize="15" Click="Button_Plus" VerticalAlignment="Top" Margin="10,10,10,0"/>
                 <ListBox x:Name="otv" Margin="0,45,0,0">
                 </ListBox>
             </Grid>
-            <TextBox x:Name="l" HorizontalAlignment="Right" Height="25" Margin="0,0,10,10" TextWrapping="Wrap" Text="длина" VerticalAlignment="Bottom" Width="120"/>
             <TextBlock x:Name="rez" HorizontalAlignment="Left" Margin="10,0,0,10" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Height="25" Width="150" Foreground="White"/>
-            <TextBox x:Name="h" HorizontalAlignment="Right" Height="25" Margin="0,0,135,10" TextWrapping="Wrap" Text="высота" VerticalAlignment="Bottom" Width="120"/>
-            <Button Content="Подсчитать" HorizontalAlignment="Right" Margin="0,0,260,10" VerticalAlignment="Bottom" Width="87" Height="25"/>
+            <TextBox x:Name="h" HorizontalAlignment="Right" Height="25" Margin="0,0,10,10" TextWrapping="Wrap" Text="высота" VerticalAlignment="Bottom" Width="120"/>
+            <Button Content="Подсчитать" HorizontalAlignment="Right" Margin="0,0,135,10" VerticalAlignment="Bottom" Width="87" Height="25" Click="calk"/>
         </Grid>
         <Menu Height="20" VerticalAlignment="Top">
             <MenuItem Header="файл">
-                <MenuItem Header="новый"/>
+                <MenuItem Header="новый" Click="New"/>
                 <MenuItem Header="сохранить пресет"/>
                 <MenuItem Header="загрузить пресет"/>
                 <MenuItem Header="выход" Click="MenuItem_Click"/>

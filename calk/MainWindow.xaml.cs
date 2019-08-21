@@ -28,18 +28,18 @@ namespace calk
         {
             if (!end)
             {
-                if (e.RightButton == MouseButtonState.Pressed)
+                if (e.LeftButton == MouseButtonState.Pressed)
                 {
-                    lens.Add(decimal.Parse(l.Text));
-                    rez.Text = calk().ToString();
-                    end = true;
-                }
-                else if (e.LeftButton == MouseButtonState.Pressed)
-                {
-                    Point p = e.GetPosition(this);
-                    if (points.Count >= 1)
-                        lens.Add(decimal.Parse(l.Text));
-                    points.Add(new Point(p.X - 10, p.Y - 30));
+                    try
+                    {
+                        Point p = e.GetPosition(this);
+                        if (points.Count >= 1)
+                        {
+                            InputBox.InputBox inputBox = new InputBox.InputBox();
+                            lens.Add(decimal.Parse(inputBox.getString()));
+                        }
+                        points.Add(new Point(p.X - 10, p.Y - 30));
+                    }catch{}
                 }
                 draw();
             }
@@ -54,7 +54,17 @@ namespace calk
 
         private decimal calk()
         {
-            decimal height = decimal.Parse(h.Text);
+            decimal height = 0;
+            try
+            {
+                height = decimal.Parse(h.Text);
+            }
+            catch
+            {
+                InputBox.InputBox inputBox = new InputBox.InputBox("Введите высоту");
+                h.Text = inputBox.getString();
+                height = decimal.Parse(h.Text);
+            }
             decimal rezult = 0;
             foreach (decimal d in lens)
             {
@@ -69,6 +79,11 @@ namespace calk
 
         private void calk(object sender, RoutedEventArgs e)
         {
+            if (points.Count != lens.Count)
+            {
+                InputBox.InputBox inputBox = new InputBox.InputBox();
+                lens.Add(decimal.Parse(inputBox.getString()));
+            }
             rez.Text = calk().ToString();
         }
 
@@ -124,6 +139,14 @@ namespace calk
             g.Children.Add(new TextBox { HorizontalAlignment = HorizontalAlignment.Left, Width = 50, Height = 25, Text = "0" });
             g.Children.Add(new TextBox { HorizontalAlignment = HorizontalAlignment.Right, Width = 50, Height = 25, Text = "0" });
             otv.Items.Add(g);
+        }
+
+        private void New(object sender, RoutedEventArgs e)
+        {
+            points.Clear();
+            lens.Clear();
+            gr.Children.Clear();
+            otv.Items.Clear();
         }
     }
 }
