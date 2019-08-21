@@ -1,0 +1,15 @@
+F:\programming\vs\calk\calk\bin\Debug\calk.exe.config
+F:\programming\vs\calk\calk\bin\Debug\calk.exe
+F:\programming\vs\calk\calk\bin\Debug\calk.pdb
+F:\programming\vs\calk\calk\obj\Debug\calk.csprojAssemblyReference.cache
+F:\programming\vs\calk\calk\obj\Debug\MainWindow.g.cs
+F:\programming\vs\calk\calk\obj\Debug\App.g.cs
+F:\programming\vs\calk\calk\obj\Debug\calk_MarkupCompile.cache
+F:\programming\vs\calk\calk\obj\Debug\calk_MarkupCompile.lref
+F:\programming\vs\calk\calk\obj\Debug\MainWindow.baml
+F:\programming\vs\calk\calk\obj\Debug\calk.g.resources
+F:\programming\vs\calk\calk\obj\Debug\calk.Properties.Resources.resources
+F:\programming\vs\calk\calk\obj\Debug\calk.csproj.GenerateResource.cache
+F:\programming\vs\calk\calk\obj\Debug\calk.csproj.CoreCompileInputs.cache
+F:\programming\vs\calk\calk\obj\Debug\calk.exe
+F:\programming\vs\calk\calk\obj\Debug\calk.pdb

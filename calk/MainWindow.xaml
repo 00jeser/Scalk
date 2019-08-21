@@ -1,0 +1,58 @@
+﻿<Window x:Class="calk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calk"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Black">
+        <Grid Margin="0,20,0,0">
+            <Grid x:Name="gr"  Margin="10,10,135,45" Background="#FFD8D8D8" MouseDown="Grid_MouseDown">
+            </Grid>
+            <Grid Margin="0,10,10,45" Background="#FFD8D8D8" MouseDown="Grid_MouseDown" HorizontalAlignment="Right" Width="120">
+                <Button Content="+" Height="30" FontSize="15" Click="Button_Plus" VerticalAlignment="Top" Margin="10,10,10,0"/>
+                <ListBox x:Name="otv" Margin="0,45,0,0">
+                </ListBox>
+            </Grid>
+            <TextBox x:Name="l" HorizontalAlignment="Right" Height="25" Margin="0,0,10,10" TextWrapping="Wrap" Text="длина" VerticalAlignment="Bottom" Width="120"/>
+            <TextBlock x:Name="rez" HorizontalAlignment="Left" Margin="10,0,0,10" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Height="25" Width="150" Foreground="White"/>
+            <TextBox x:Name="h" HorizontalAlignment="Right" Height="25" Margin="0,0,135,10" TextWrapping="Wrap" Text="высота" VerticalAlignment="Bottom" Width="120"/>
+            <Button Content="Подсчитать" HorizontalAlignment="Right" Margin="0,0,260,10" VerticalAlignment="Bottom" Width="87" Height="25"/>
+        </Grid>
+        <Menu Height="20" VerticalAlignment="Top">
+            <MenuItem Header="файл">
+                <MenuItem Header="новый"/>
+                <MenuItem Header="сохранить пресет"/>
+                <MenuItem Header="загрузить пресет"/>
+                <MenuItem Header="выход" Click="MenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="настройки">
+                <MenuItem Header="цвет полигона">
+                    <MenuItem Background="Aqua" Click="PolyColor"/>
+                    <MenuItem Background="Red" Click="PolyColor"/>
+                    <MenuItem Background="Black" Click="PolyColor"/>
+                    <MenuItem Background="PaleGoldenrod" Click="PolyColor"/>
+                    <MenuItem Background="Purple" Click="PolyColor"/>
+                    <MenuItem Background="MediumPurple" Click="PolyColor"/>
+                </MenuItem>
+                <MenuItem Header="цвет точки">
+                    <MenuItem Background="Aqua" Click="DotColor"/>
+                    <MenuItem Background="Red" Click="DotColor"/>
+                    <MenuItem Background="Black" Click="DotColor"/>
+                    <MenuItem Background="PaleGoldenrod" Click="DotColor"/>
+                    <MenuItem Background="Purple" Click="DotColor"/>
+                    <MenuItem Background="MediumPurple" Click="DotColor"/>
+                </MenuItem>
+                <MenuItem Header="цвет полос">
+                    <MenuItem Background="Aqua"/>
+                    <MenuItem Background="Red"/>
+                    <MenuItem Background="Black"/>
+                    <MenuItem Background="PaleGoldenrod"/>
+                    <MenuItem Background="Purple"/>
+                    <MenuItem Background="MediumPurple"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
