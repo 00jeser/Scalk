@@ -39,7 +39,8 @@ namespace calk
                             lens.Add(decimal.Parse(inputBox.getString()));
                         }
                         points.Add(new Point(p.X - 10, p.Y - 30));
-                    }catch{}
+                    }
+                    catch {}
                 }
                 draw();
             }

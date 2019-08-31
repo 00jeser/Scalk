@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calk"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" d:DesignWidth="814" d:DesignHeight="442">
     <Grid Background="Black">
         <Grid Margin="0,20,0,0">
             <Grid x:Name="gr"  Margin="10,10,135,45" Background="#FFD8D8D8" MouseDown="Grid_MouseDown">
@@ -44,12 +44,12 @@
                     <MenuItem Background="MediumPurple" Click="DotColor"/>
                 </MenuItem>
                 <MenuItem Header="цвет полос">
-                    <MenuItem Background="Aqua"/>
-                    <MenuItem Background="Red"/>
-                    <MenuItem Background="Black"/>
-                    <MenuItem Background="PaleGoldenrod"/>
-                    <MenuItem Background="Purple"/>
-                    <MenuItem Background="MediumPurple"/>
+                    <MenuItem Background="Aqua" Click="LineColor"/>
+                    <MenuItem Background="Red" Click="LineColor"/>
+                    <MenuItem Background="Black" Click="LineColor"/>
+                    <MenuItem Background="PaleGoldenrod" Click="LineColor"/>
+                    <MenuItem Background="Purple" Click="LineColor"/>
+                    <MenuItem Background="MediumPurple" Click="LineColor"/>
                 </MenuItem>
             </MenuItem>
         </Menu>
