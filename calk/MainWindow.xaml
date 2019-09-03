@@ -16,8 +16,7 @@
                 </ListBox>
             </Grid>
             <TextBlock x:Name="rez" HorizontalAlignment="Left" Margin="10,0,0,10" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Height="25" Width="150" Foreground="White"/>
-            <TextBox x:Name="h" HorizontalAlignment="Right" Height="25" Margin="0,0,10,10" TextWrapping="Wrap" Text="высота" VerticalAlignment="Bottom" Width="120"/>
-            <Button Content="Подсчитать" HorizontalAlignment="Right" Margin="0,0,135,10" VerticalAlignment="Bottom" Width="87" Height="25" Click="calk"/>
+            <Button Content="Подсчитать" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="87" Height="25" Click="calk"/>
         </Grid>
         <Menu Height="20" VerticalAlignment="Top">
             <MenuItem Header="файл">

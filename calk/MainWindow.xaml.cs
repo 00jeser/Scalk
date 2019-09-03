@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -12,11 +13,6 @@ namespace calk
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-            updateParam();
-        }
 
         public List<Point> points = new List<Point>();
         public List<decimal> lens = new List<decimal>();
@@ -27,6 +23,12 @@ namespace calk
         public Brush TextC;
         public int TextS;
         public double LineH;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            updateParam();
+        }
 
         public void updateParam()
         {
@@ -51,36 +53,37 @@ namespace calk
                         Point p = e.GetPosition(this);
                         if (points.Count >= 1)
                         {
+                            double l = Math.Sqrt(Math.Pow(Math.Max(p.X - 10, points[0].X) - Math.Min(p.X - 10, points[0].X), 2) + Math.Pow(Math.Max(p.Y - 10, points[0].Y) - Math.Min(p.Y - 10, points[0].Y), 2));
                             InputBox.InputBox inputBox = new InputBox.InputBox();
-                            lens.Add(decimal.Parse(inputBox.getString().Replace(".", ",")));
+                            if (l < 30)
+                            {
+                                lens.Add(decimal.Parse(inputBox.getString().Replace(".", ",")));
+                                rez.Text = calk().ToString();
+                                draw();
+                                end = true;
+                                return;
+                            }
+                            else
+                            {
+                                lens.Add(decimal.Parse(inputBox.getString().Replace(".", ",")));
+                            }
                         }
                         points.Add(new Point(p.X - 10, p.Y - 30));
+
                     }
-                    catch {}
+                    catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
                 draw();
             }
-            else
-            {
-                points = new List<Point>();
-                lens = new List<decimal>();
-                gr.Children.Clear();
-                end = false;
-            }
         }
 
+        decimal height = 0;
         private decimal calk()
         {
-            decimal height = 0;
-            try
-            {
-                height = decimal.Parse(h.Text);
-            }
-            catch
+            if (height == 0)
             {
                 InputBox.InputBox inputBox = new InputBox.InputBox("Введите высоту");
-                h.Text = inputBox.getString().Replace(".", ",");
-                height = decimal.Parse(h.Text);
+                height = decimal.Parse(inputBox.getString().Replace(".", ","));
             }
             decimal rezult = 0;
             foreach (decimal d in lens)
@@ -89,7 +92,7 @@ namespace calk
             }
             foreach (Grid g in otv.Items)
             {
-                rezult -= decimal.Parse(((TextBox)g.Children[0]).Text.Replace(".",",")) * decimal.Parse(((TextBox)g.Children[1]).Text.Replace(".", ","));
+                rezult -= decimal.Parse(((TextBox)g.Children[0]).Text.Replace(".", ",")) * decimal.Parse(((TextBox)g.Children[1]).Text.Replace(".", ","));
             }
             return rezult;
         }
@@ -103,6 +106,7 @@ namespace calk
             }
             rez.Text = calk().ToString();
             draw();
+            end = true;
         }
 
         private void draw()
@@ -134,8 +138,11 @@ namespace calk
                 {
                     Point pos = FindTxtPos(points[i], points[i == points.Count - 1 ? 0 : i + 1]);
                     gr.Children.Add(new TextBlock { Text = lens[i].ToString(), Margin = new Thickness(pos.X, pos.Y, 0, 0), FontSize = TextS, Foreground = TextC });
-                }catch{}
+                }
+                catch { }
             }
+            if (height != 0)
+                gr.Children.Add(new TextBlock { Text = "Высота:" + height });
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
