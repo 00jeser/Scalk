@@ -6,7 +6,7 @@
       <Value Profile="(Default)">#FF000000</Value>
     </Setting>
     <Setting Name="PolyC" Type="System.Windows.Media.Color" Scope="User">
-      <Value Profile="(Default)">#00000000</Value>
+      <Value Profile="(Default)">#FF9370DB</Value>
     </Setting>
     <Setting Name="DotC" Type="System.Windows.Media.Color" Scope="User">
       <Value Profile="(Default)">#FF00FFFF</Value>

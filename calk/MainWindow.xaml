@@ -34,6 +34,7 @@
                     <MenuItem Background="PaleGoldenrod" Click="PolyColor"/>
                     <MenuItem Background="Purple" Click="PolyColor"/>
                     <MenuItem Background="MediumPurple" Click="PolyColor"/>
+                    <MenuItem Header="нет" Background="#009370DB" Click="PolyColor"/>
                 </MenuItem>
                 <MenuItem Header="цвет точки">
                     <MenuItem Background="Aqua" Click="DotColor"/>
@@ -42,6 +43,7 @@
                     <MenuItem Background="PaleGoldenrod" Click="DotColor"/>
                     <MenuItem Background="Purple" Click="DotColor"/>
                     <MenuItem Background="MediumPurple" Click="DotColor"/>
+                    <MenuItem Header="нет" Background="#009370DB" Click="DotColor"/>
                 </MenuItem>
                 <MenuItem Header="цвет текста">
                     <MenuItem Background="Aqua" Click="TxtColor"/>
@@ -50,6 +52,7 @@
                     <MenuItem Background="PaleGoldenrod" Click="TxtColor"/>
                     <MenuItem Background="Purple" Click="TxtColor"/>
                     <MenuItem Background="MediumPurple" Click="TxtColor"/>
+                    <MenuItem Header="нет" Background="#009370DB" Click="TxtColor"/>
                 </MenuItem>
                 <MenuItem Header="цвет полос">
                     <MenuItem Background="#7F01FFFF" Click="LineColor"/>
@@ -58,6 +61,7 @@
                     <MenuItem Background="#7FEEE8AA" Click="LineColor"/>
                     <MenuItem Background="#7F800080" Click="LineColor"/>
                     <MenuItem Background="#7F9370DB" Click="LineColor"/>
+                    <MenuItem Header="нет" Background="#009370DB" Click="LineColor"/>
                 </MenuItem>
                 <MenuItem Header="размер текста">
                     <MenuItem Header="10" Click="FontS"/>
@@ -66,8 +70,11 @@
                     <MenuItem Header="16" Click="FontS"/>
                     <MenuItem Header="18" Click="FontS"/>
                     <MenuItem Header="20" Click="FontS"/>
+                    <MenuItem Header="22" Click="FontS"/>
+                    <MenuItem Header="24" Click="FontS"/>
                 </MenuItem>
                 <MenuItem Header="размер линии">
+                    <MenuItem Header="0,1" Click="LineSize"/>
                     <MenuItem Header="0,5" Click="LineSize"/>
                     <MenuItem Header="1" Click="LineSize"/>
                     <MenuItem Header="2" Click="LineSize"/>

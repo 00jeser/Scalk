@@ -136,20 +136,6 @@ namespace calk
                     gr.Children.Add(new TextBlock { Text = lens[i].ToString(), Margin = new Thickness(pos.X, pos.Y, 0, 0), FontSize = TextS, Foreground = TextC });
                 }catch{}
             }
-            gr.Children.Add(new TextBlock { Text = Area(points.ToArray()).ToString() });
-        }
-
-        double Area(Point[] polygon)
-        {
-            double area = 0;
-            for (int i = 0; i < polygon.Length; i++)
-            {
-                int j = (i + 1) % polygon.Length;
-                Point a = polygon[i], b = polygon[j];
-
-                area += a.X * b.Y - a.Y * b.X;
-            }
-            return System.Math.Abs(area) / 2;
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -196,7 +182,7 @@ namespace calk
             otv.Items.Clear();
         }
 
-        public Point FindTxtPos(Point p1, Point p2) => new Point((p1.X + p2.X) / 2, (p1.Y + p2.Y) / 2);
+        public Point FindTxtPos(Point p1, Point p2) => new Point((p1.X + p2.X) / 2 - TextS / 2, (p1.Y + p2.Y) / 2);
 
         private void FontS(object sender, RoutedEventArgs e)
         {
