@@ -43,13 +43,35 @@
                     <MenuItem Background="Purple" Click="DotColor"/>
                     <MenuItem Background="MediumPurple" Click="DotColor"/>
                 </MenuItem>
+                <MenuItem Header="цвет текста">
+                    <MenuItem Background="Aqua" Click="TxtColor"/>
+                    <MenuItem Background="Red" Click="TxtColor"/>
+                    <MenuItem Background="Black" Click="TxtColor"/>
+                    <MenuItem Background="PaleGoldenrod" Click="TxtColor"/>
+                    <MenuItem Background="Purple" Click="TxtColor"/>
+                    <MenuItem Background="MediumPurple" Click="TxtColor"/>
+                </MenuItem>
                 <MenuItem Header="цвет полос">
-                    <MenuItem Background="Aqua" Click="LineColor"/>
-                    <MenuItem Background="Red" Click="LineColor"/>
-                    <MenuItem Background="Black" Click="LineColor"/>
-                    <MenuItem Background="PaleGoldenrod" Click="LineColor"/>
-                    <MenuItem Background="Purple" Click="LineColor"/>
-                    <MenuItem Background="MediumPurple" Click="LineColor"/>
+                    <MenuItem Background="#7F01FFFF" Click="LineColor"/>
+                    <MenuItem Background="#7FFF0000" Click="LineColor"/>
+                    <MenuItem Background="#7F000000" Click="LineColor"/>
+                    <MenuItem Background="#7FEEE8AA" Click="LineColor"/>
+                    <MenuItem Background="#7F800080" Click="LineColor"/>
+                    <MenuItem Background="#7F9370DB" Click="LineColor"/>
+                </MenuItem>
+                <MenuItem Header="размер текста">
+                    <MenuItem Header="10" Click="FontS"/>
+                    <MenuItem Header="12" Click="FontS"/>
+                    <MenuItem Header="14" Click="FontS"/>
+                    <MenuItem Header="16" Click="FontS"/>
+                    <MenuItem Header="18" Click="FontS"/>
+                    <MenuItem Header="20" Click="FontS"/>
+                </MenuItem>
+                <MenuItem Header="размер линии">
+                    <MenuItem Header="0,5" Click="LineSize"/>
+                    <MenuItem Header="1" Click="LineSize"/>
+                    <MenuItem Header="2" Click="LineSize"/>
+                    <MenuItem Header="3" Click="LineSize"/>
                 </MenuItem>
             </MenuItem>
         </Menu>
